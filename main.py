@@ -1,23 +1,23 @@
-##  Algoritm misol:
-##  1.Foydalanuvchi kiritgan ikki sonni yig'indisini qaytarish:
-#1.Start 
-#2.num1, num2 va summa degan o'zgaruvchilar yaratamiz.
-#3.num1 va num2 ga qiymatlar yuklaymiz.
-#4.num1 ni num2 ga qo'shamiz va yig'indini summa ga yuklaymiz:
-#    num1 + num2 = summa
-#5.Summani foydalanuvchiga qaytarish
-#6.Stop
+##  Algoritm
+## N factorialni xisoblash: N = 5 bo'sa, 5 factorial algoritmi:
 
-# a-variant
-num1 = 9
-num2 = 8
-summa = 0
-summa = num1 + num2
-print(summa)
-# b-variant: Function 
-def xisob(son1,son2):
-  natija = son1 + son2
-  return natija
+#1.Start
+#2.N va i o'zgarubchilarini yaratib olamiz.
+#3.o'zgaruvchilarga qiymat joylymiz
+#4.Faktarilga 1 qiymat beramiz va i ga ko'paytiramiz va qiymatni faktorialga joylaymiz:
+# factorial = factorial * i
+#5. i+=1 
+#    
+#   aks holda c katta 
+#6.Natijani foydalanuvchiga qaytarish
 
-#  Tekshiramiz:
-print(xisob(7,3))
+
+
+def factorial(N):
+    i=1
+    fact=1
+    while i!= N+1:
+        fact = fact*i
+        i +=1
+    return fact
+print(factorial(5))
