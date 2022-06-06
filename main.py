@@ -1,19 +1,19 @@
-#Quick sort yordamida royxatni tartiblash
+# Quick yordamida ro'yxatni tartiblash
 from random import randrange
-def qsort(array):
-    """Ro'yxatni tartiblash"""
-    if len(array)<2:
-        return array
+def qsort(list): #Quick sort funksiyasini xosil qilib ro'yxat qabul qiladigan qilamiz
+    if len(list) < 2:   #Ro'yxatda element bor yoki yo'qligini tekshirib olamiz
+        return list
     else:
-      pivot = array.pop(randrange(len(array)))
-      kichik = [i for i in array if i <= pivot]
-      katta = [i for i in array if i >pivot ]
-      print(f"{kichik} + [{pivot}] +{katta}")
-      return qsort(kichik) + [pivot] + qsort(katta)
-                        
+        pivot = list.pop(randrange(len(list)))
+        kichik = [i for i in list if i < pivot]
+        katta = [ i for i in list if i > pivot]
+        print(f"{kichik} + [{pivot}] + {katta}")
+        return qsort(kichik) + [pivot] + qsort(katta)
 
-array3 = list(range(20))
-lit =[344,34,4,8,5,9,3,1,0,14,7,2,34]
-print(array3,lit)
-print(qsort(lit))
-print(qsort(array3))
+list1 = [2,7,4,5,8,6,9,7,13,0,1,365,4,10,65,978,41,3,65,84,5145,12,41]      
+list2 = list(range(20)) 
+print(list1)
+
+print(qsort(list1))  
+print(list2)
+print(qsort(list2))
